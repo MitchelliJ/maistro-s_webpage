@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const cards = [
+  {
+    title: 'AI-scan',
+    body: 'een halve dag aan tafel, een concreet overzicht van kansen, gerangschikt op impact en haalbaarheid.',
+  },
+  {
+    title: 'Roadmap',
+    body: 'wat eerst, wat later, wat nooit. Met kosten en verwachte opbrengst.',
+  },
+  {
+    title: 'Sparringpartner',
+    body: 'een vast moment per maand voor directies die AI serieus nemen maar geen CTO hebben.',
+  },
+];
+---
+
+<BaseLayout
+  title="Strategie & advies"
+  description="Voor je investeert in AI, wil je weten waar het geld zit. AI-scan, roadmap en een vaste sparringpartner voor directies die AI serieus nemen."
+  active="strategie"
+>
+  <div class="split-even">
+    <div class="section section-tight" style="border-bottom: 0;">
+      <div class="rv eyebrow">Strategie &amp; advies</div>
+      <h1 class="rv hero-title" style="--h1-size: 4.75rem; line-height: .96; letter-spacing: -.035em; animation-delay: .05s;">Eerst weten.<br />Dan doen.</h1>
+    </div>
+    <div class="section section-tight" style="border-bottom: 0; display: flex; align-items: center;">
+      <p class="rv" style="font-size: 19px; line-height: 1.55; margin: 0; animation-delay: .1s;">Voor je investeert in AI, wil je weten waar het geld zit. Wij kijken naar je bedrijf zoals een bouwer dat doet: welke processen zijn repetitief, waar zit de data, wat is realistisch met de tools die je al hebt.</p>
+    </div>
+  </div>
+
+  <div class="section section-tight" style="border-bottom: 0;">
+    <h2 class="rv section-title" style="font-size: clamp(1.7rem, 2.4vw + 1rem, 2.1rem);">Wat je krijgt</h2>
+  </div>
+  <div class="cols-3 section">
+    {cards.map((card, i) => (
+      <div class="rv" style={i ? `animation-delay: ${(i * 0.08).toFixed(2)}s;` : undefined}>
+        <div style="width: 44px; height: 6px; background: var(--color-accent); margin-bottom: 18px;"></div>
+        <h3 style="font-size: 23px; letter-spacing: -.02em; margin: 0 0 10px;">{card.title}</h3>
+        <p style="font-size: 14.5px; line-height: 1.6; margin: 0;">{card.body}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="cta-banner">
+    <p class="rv pull-quote" style="font-size: 30px; line-height: 1.15; margin: 0; max-width: 26ch;">Een uur aan tafel. Geen verplichtingen, geen verkooppraatje.</p>
+    <a href="mailto:hallo@maistros.co" class="btn btn-primary" style="font-size: 16px; padding: 16px 20px;">Plan een kennismaking</a>
+  </div>
+</BaseLayout>

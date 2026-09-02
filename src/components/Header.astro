@@ -1,0 +1,32 @@
+---
+interface Props {
+  active: 'home' | 'strategie' | 'power-ai' | 'ai-agents' | 'over-ons' | 'none';
+  ctaLabel?: string;
+  ctaHref?: string;
+}
+
+const { active, ctaLabel = 'Plan een kennismaking', ctaHref = 'mailto:hallo@maistros.co' } = Astro.props;
+
+const links = [
+  { key: 'home', href: '/', label: 'Home' },
+  { key: 'strategie', href: '/strategie-advies/', label: 'Strategie & advies' },
+  { key: 'power-ai', href: '/power-ai/', label: 'Power AI' },
+  { key: 'ai-agents', href: '/ai-agents-op-maat/', label: 'AI-agents op maat' },
+  { key: 'over-ons', href: '/over-ons/', label: 'Over ons' },
+];
+---
+
+<header class="site-header">
+  <a href="/" class="brand">maistro<span class="brand-mark">’</span>s</a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+  <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="site-nav" aria-label="Hoofdnavigatie">
+    {links.map((link) => (
+      <a href={link.href} aria-current={active === link.key ? 'page' : undefined}>{link.label}</a>
+    ))}
+    <a href="/over-ons/#contact" class="header-cta">Contact</a>
+  </nav>
+  <a href={ctaHref} class="btn btn-primary">{ctaLabel}</a>
+</header>

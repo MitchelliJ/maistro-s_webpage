@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const steps = [
+  {
+    n: '1',
+    title: 'AI-champions',
+    body: 'Elke afdeling wijst één persoon aan. Niet per se de meest technische, wel de meest nieuwsgierige. Dit worden jouw AI-champions.',
+  },
+  {
+    n: '2',
+    title: 'Workshop',
+    body: 'Eén dag. We leren de champions wat AI kan, wat het niet kan, en hoe je een goed use case herkent. Aan het eind van de dag heeft elke afdeling een shortlist.',
+  },
+  {
+    n: '3',
+    title: 'Observatie & businesscase',
+    body: 'We lopen mee in het proces. We rekenen uit wat de agent bespaart, wat het kost om te bouwen en wanneer het terugverdiend is. Eerlijk: soms is het antwoord “niet doen”.',
+  },
+  {
+    n: '4',
+    title: 'Bouwen',
+    body: 'De agents die het waard zijn, bouwen we. Samen met de champion, zodat de kennis in jouw bedrijf blijft.',
+  },
+  {
+    n: '5',
+    title: 'Volgende ronde',
+    body: 'De champions hebben nu een werkende agent gezien. Ze zien de volgende kansen zelf. Zo groeit AI in je bedrijf zonder dat je ons elke keer nodig hebt.',
+  },
+];
+---
+
+<BaseLayout
+  title="AI-agents op maat"
+  description="Jullie kennen het werk. Wij kennen de AI. Samen bouwen we de agent — van AI-champions tot een werkende agent, gebouwd met je eigen mensen."
+  active="ai-agents"
+>
+  <div class="section section-tight hero-agents">
+    <div class="rv eyebrow">AI-agents op maat</div>
+    <h1 class="rv hero-title" style="--h1-size: 3.75rem; --h1-measure: 22ch; animation-delay: .05s;">Jullie kennen het werk. Wij kennen de AI. Samen bouwen we de agent.</h1>
+    <div class="hero-agents-row">
+      <p class="rv lede" style="max-width: 60ch; animation-delay: .1s;">De beste AI-toepassingen worden niet bedacht in een vergaderzaal. Ze komen van de mensen die elke dag tegen hetzelfde probleem aanlopen. Ons traject haalt die kennis naar boven en bouwt er iets van dat werkt.</p>
+      <a href="mailto:hallo@maistros.co" class="btn btn-primary rv" style="font-size: 15px; padding: 14px 20px; margin: 0; text-align: left; justify-content: flex-start; animation-delay: .15s;">Plan een kennismaking</a>
+    </div>
+  </div>
+
+  <div class="section section-tight" style="border-bottom: 0;">
+    <h2 class="rv section-title">Het traject</h2>
+  </div>
+  <div class="steps section" style="padding: 0; border-bottom: 2px solid var(--color-divider);">
+    {steps.map((step, i) => (
+      <div class="rv" style={`animation-delay: ${(i * 0.06).toFixed(2)}s;`}>
+        <div class="step-marker"><span></span><span>Stap {step.n}</span></div>
+        <h3 style="font-size: 24px; letter-spacing: -.022em; margin: 0;">{step.title}</h3>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0;">{step.body}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="split-reverse" style="--side-w: 340px;">
+    <div class="section section-tight" style="border-bottom: 0;">
+      <h2 class="rv section-title" style="margin-bottom: 14px;">Voor wie</h2>
+      <p class="rv" style="font-size: 15.5px; line-height: 1.6; margin: 0;">Dit werkt voor bedrijven van 50 tot 250 medewerkers waar:</p>
+    </div>
+    <div class="section section-tight" style="border-bottom: 0;">
+      <div class="rows">
+        <div class="rv" style="font-size: 16.5px; line-height: 1.5;">processen grotendeels in Microsoft draaien;</div>
+        <div class="rv" style="font-size: 16.5px; line-height: 1.5; animation-delay: .06s;">de directie zelf achter AI staat (dit werkt niet als project van IT alleen);</div>
+        <div class="rv" style="font-size: 16.5px; line-height: 1.5; animation-delay: .12s;">er ruimte is om mensen een paar dagen vrij te maken om mee te bouwen.</div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .hero-agents {
+    border-bottom: 2px solid var(--color-divider);
+  }
+  .hero-agents-row {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 48px;
+    align-items: end;
+  }
+  @media (max-width: 860px) {
+    .hero-agents-row {
+      grid-template-columns: 1fr;
+    }
+    .hero-agents-row .btn {
+      width: 100%;
+    }
+  }
+</style>
