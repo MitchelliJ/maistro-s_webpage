@@ -10,10 +10,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <div class="split" style="--side-w: 380px;">
     <div class="section section-tight" style="border-bottom: 0;">
       <div class="rv eyebrow">Over maistros</div>
-      <h1 class="rv hero-title" style="--h1-size: 4.5rem; line-height: .96; letter-spacing: -.035em; margin-bottom: 30px; animation-delay: .05s;">Twee bouwers.<br />Nul tussenlagen.</h1>
-      <p class="rv" style="font-size: 17.5px; line-height: 1.6; max-width: 62ch; margin: 0 0 18px; animation-delay: .1s;">maistros is Niels van Rijswijk en Michiel Berk. De een leeft in data — Power BI, Dynamics, datamodellen. De ander bouwt AI-systemen — agents, integraties, de dingen die het werk echt doen. Samen dekken we precies het stuk waar de meeste AI-projecten stranden: de brug tussen wat er in je systemen zit en wat je ermee wilt.</p>
-      <p class="rv" style="font-size: 17.5px; line-height: 1.6; max-width: 62ch; margin: 0 0 18px; animation-delay: .15s;">We hebben maistros opgericht omdat we het te vaak zagen: mooie plannen, dure licenties, en na een half jaar doet niemand er iets mee. Dat kan beter. Niet met grotere teams, maar met mensen die zelf bouwen én eerlijk zeggen wanneer iets niet gaat werken.</p>
-      <p class="rv text-muted" style="font-size: 14px; margin: 0; animation-delay: .2s;">Gevestigd in Nederland. Werkend voor het Nederlandse mkb.</p>
+      <h1 class="rv hero-title" style="margin-bottom: 30px; animation-delay: .06s;">Twee bouwers.<br />Nul tussenlagen.</h1>
+      <p class="rv" style="font-size: 17.5px; line-height: 1.6; max-width: 62ch; margin: 0 0 18px; animation-delay: .12s;">maistros is Niels van Rijswijk en Michiel Berk. De een leeft in data — Power BI, Dynamics, datamodellen. De ander bouwt AI-systemen — agents, integraties, de dingen die het werk echt doen. Samen dekken we precies het stuk waar de meeste AI-projecten stranden: de brug tussen wat er in je systemen zit en wat je ermee wilt.</p>
+      <p class="rv" style="font-size: 17.5px; line-height: 1.6; max-width: 62ch; margin: 0 0 18px; animation-delay: .18s;">We hebben maistros opgericht omdat we het te vaak zagen: mooie plannen, dure licenties, en na een half jaar doet niemand er iets mee. Dat kan beter. Niet met grotere teams, maar met mensen die zelf bouwen én eerlijk zeggen wanneer iets niet gaat werken.</p>
+      <p class="rv text-muted" style="font-size: 14px; margin: 0; animation-delay: .24s;">Gevestigd in Nederland. Werkend voor het Nederlandse mkb.</p>
     </div>
     <div class="section section-tight" style="border-bottom: 0;">
       <div style="font-size: 11px; font-weight: 600; color: var(--color-caption); padding-bottom: 14px;">Het team</div>
@@ -22,7 +22,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="team-role">Data — Power BI, Dynamics, datamodellen</div>
         <div style="font-size: 13.5px; line-height: 1.55; color: var(--color-text);">Begon als Power BI-consultant en richtte Newbit op, een datateam in Rotterdam. Beheerst de hele keten: data ontsluiten, opslaan, visualiseren, analyseren en forecasten. Werkte onder meer voor Chevron Philips Chemicals, Aegon, ELCEE en Vadobag.</div>
       </div>
-      <div class="team-card rv" style="animation-delay: .08s;">
+      <div class="team-card rv" style="animation-delay: .06s;">
         <div style="font-family: var(--font-heading); font-weight: 700; font-size: 19px; color: var(--color-heading);">Michiel Berk</div>
         <div class="team-role">AI — agents, integraties, systemen</div>
         <div style="font-size: 13.5px; line-height: 1.55; color: var(--color-text);">Acht jaar in IT-recruitment, laatste jaren als manager. Stapte over naar software toen generatieve AI het bouwen zelf binnen bereik bracht. Bouwde binnen een jaar een B2B SaaS-product met drie betalende klanten.</div>
@@ -31,11 +31,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </div>
 
-  <div class="cta-banner" id="contact">
+  <section class="contact-section" id="contact" aria-labelledby="contact-title">
     <div>
-      <h2 class="rv section-title" style="font-size: clamp(1.7rem, 2.6vw + 1rem, 2.1rem); margin-bottom: 12px;">Vertel kort wat er speelt.</h2>
+      <div class="eyebrow">Contact</div>
+      <h2 class="rv section-title" id="contact-title" style="margin-bottom: 12px;">Vertel kort wat er speelt.</h2>
       <p class="rv" style="font-size: 16px; line-height: 1.6; max-width: 56ch; margin: 0;">We reageren binnen één werkdag, en je krijgt een mens aan de lijn.</p>
     </div>
-    <a href="mailto:hallo@maistros.co" class="btn btn-primary" style="font-size: 16px; padding: 16px 20px;">Plan een kennismaking</a>
-  </div>
+    <address class="contact-details rv">
+      <div>
+        <span>Adres</span>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Beursplein+37%2C+3011+AA+Rotterdam">Beursplein 37<br />3011 AA Rotterdam</a>
+      </div>
+      <div>
+        <span>E-mail</span>
+        <a href="mailto:hallo@maistros.co">hallo@maistros.co</a>
+      </div>
+      <div>
+        <span>Telefoon</span>
+        <a href="tel:+31650589359">+31 (6) 50589359</a>
+      </div>
+    </address>
+  </section>
 </BaseLayout>

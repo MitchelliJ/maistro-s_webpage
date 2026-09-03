@@ -37,10 +37,10 @@ const steps = [
 >
   <div class="section section-tight hero-agents">
     <div class="rv eyebrow">AI-agents op maat</div>
-    <h1 class="rv hero-title" style="--h1-size: 3.75rem; --h1-measure: 22ch; animation-delay: .05s;">Jullie kennen het werk. Wij kennen de AI. Samen bouwen we de agent.</h1>
+    <h1 class="rv hero-title" style="--h1-measure: 22ch; animation-delay: .06s;">Jullie kennen het werk. Wij kennen de AI. Samen bouwen we de agent.</h1>
     <div class="hero-agents-row">
-      <p class="rv lede" style="max-width: 60ch; animation-delay: .1s;">De beste AI-toepassingen worden niet bedacht in een vergaderzaal. Ze komen van de mensen die elke dag tegen hetzelfde probleem aanlopen. Ons traject haalt die kennis naar boven en bouwt er iets van dat werkt.</p>
-      <a href="mailto:hallo@maistros.co" class="btn btn-primary rv" style="font-size: 15px; padding: 14px 20px; margin: 0; text-align: left; justify-content: flex-start; animation-delay: .15s;">Plan een kennismaking</a>
+      <p class="rv lede" style="max-width: 60ch; animation-delay: .12s;">De beste AI-toepassingen worden niet bedacht in een vergaderzaal. Ze komen van de mensen die elke dag tegen hetzelfde probleem aanlopen. Ons traject haalt die kennis naar boven en bouwt er iets van dat werkt.</p>
+      <a href="mailto:hallo@maistros.co" class="btn btn-primary rv" style="font-size: 15px; padding: 14px 20px; margin: 0; text-align: left; justify-content: flex-start; animation-delay: .18s;">Plan een kennismaking</a>
     </div>
   </div>
 
@@ -51,7 +51,7 @@ const steps = [
     {steps.map((step, i) => (
       <div class="rv" style={`animation-delay: ${(i * 0.06).toFixed(2)}s;`}>
         <div class="step-marker"><span></span><span>Stap {step.n}</span></div>
-        <h3 style="font-size: 24px; letter-spacing: -.022em; margin: 0;">{step.title}</h3>
+        <h3 style="margin: 0;">{step.title}</h3>
         <p style="font-size: 15px; line-height: 1.6; margin: 0;">{step.body}</p>
       </div>
     ))}

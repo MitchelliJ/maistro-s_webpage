@@ -30,7 +30,6 @@ const links = [
     {links.map((link) => (
       <a href={link.href} aria-current={active === link.key ? 'page' : undefined}>{link.label}</a>
     ))}
-    <a href="/over-ons/#contact" class="header-cta">Contact</a>
   </nav>
   <a href={ctaHref} class="btn btn-primary">{ctaLabel}</a>
 </header>

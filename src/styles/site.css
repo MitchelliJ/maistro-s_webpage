@@ -15,8 +15,12 @@ html.js .bt.in { animation: bt-in var(--dur-page) var(--ease-beat) forwards; }
 @keyframes rv-in { from { opacity: 0; transform: translateY(var(--rise)); } to { opacity: 1; transform: none; } }
 @keyframes rl-in { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes bt-in { from { transform: scaleY(.08); } to { transform: scaleY(1); } }
+@keyframes reduced-fade { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) {
-  html.js .rv.in, html.js .rl.in, html.js .bt.in { animation-duration: .01s; }
+  html.js .rv, html.js .rl, html.js .bt { opacity: 0; transform: none; }
+  html.js .rv.in, html.js .rl.in, html.js .bt.in {
+    animation: reduced-fade var(--dur-page) linear forwards;
+  }
 }
 
 body { overflow-x: hidden; background: var(--color-bg-sunk); }
@@ -39,12 +43,12 @@ body { overflow-x: hidden; background: var(--color-bg-sunk); }
 .cols-3.section { padding: 0; }
 
 .eyebrow {
-  font-size: 11px; font-weight: 600; letter-spacing: 0;
+  font-size: 14px; font-weight: 600; line-height: 1.6; letter-spacing: 0;
   color: var(--color-accent); margin-bottom: 20px;
 }
 
-.hero-title { font-size: clamp(2.4rem, 4.4vw + 1.2rem, var(--h1-size, 4.6rem)); line-height: .99; letter-spacing: -.015em; margin: 0 0 24px; max-width: var(--h1-measure, 18ch); }
-.section-title { font-size: clamp(1.7rem, 2.4vw + 1rem, 2.4rem); letter-spacing: -.015em; margin: 0; }
+.hero-title { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.05; letter-spacing: -.015em; margin: 0 0 24px; max-width: var(--h1-measure, 18ch); }
+.section-title { font-size: 32px; line-height: 1.15; letter-spacing: -.01em; margin: 0; }
 .lede { font-size: clamp(1.05rem, .5vw + .95rem, 1.19rem); line-height: 1.55; max-width: 58ch; margin: 0; }
 
 /* — header — */
@@ -84,8 +88,6 @@ body { overflow-x: hidden; background: var(--color-bg-sunk); }
   .site-header .btn-primary { display: none; }
   .nav-toggle-label { display: flex; }
   .nav-toggle:checked ~ .site-nav { max-height: 480px; }
-  .nav-toggle:checked ~ .site-nav .header-cta { display: flex; padding: 14px var(--gutter); border-top: 1px solid var(--color-divider); color: var(--color-accent); }
-  .header-cta { display: none; }
 }
 
 /* — split layouts (two columns collapsing to one) — */
@@ -149,6 +151,38 @@ body { overflow-x: hidden; background: var(--color-bg-sunk); }
   .cta-banner { grid-template-columns: 1fr; }
 }
 
+/* — contact — */
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  padding: clamp(32px, 5vw, 56px) var(--gutter);
+  border-bottom: 1px solid var(--color-divider);
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-style: normal;
+}
+.contact-details > div {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+  padding: 16px 0;
+  border-top: 1px solid var(--color-divider);
+}
+.contact-details > div:last-child { border-bottom: 1px solid var(--color-divider); }
+.contact-details span { font-size: 14px; color: var(--color-caption); }
+.contact-details a { font-weight: 600; text-decoration: none; }
+.contact-details a:hover { text-decoration: underline; }
+@media (max-width: 860px) {
+  .contact-section { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 480px) {
+  .contact-details > div { grid-template-columns: 1fr; gap: 4px; }
+}
+
 /* — footer — */
 .site-footer {
   display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap;
@@ -157,7 +191,7 @@ body { overflow-x: hidden; background: var(--color-bg-sunk); }
 .footer-region { margin-left: auto; }
 
 /* — misc content patterns — */
-.report-mock { background: var(--color-surface-card); border: 1px solid var(--color-divider); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); overflow: hidden; }
+.report-mock { background: var(--color-surface-card); border: 1px solid var(--color-divider); border-radius: var(--radius-lg); overflow: hidden; }
 .report-mock-head {
   display: flex; align-items: center; gap: 10px; padding: 12px 16px;
   border-bottom: 1px solid var(--color-divider); font-size: 11px; font-weight: 600;

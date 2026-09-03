@@ -63,10 +63,11 @@
 }
 
 @keyframes maistros-sparkle { 0% { transform: scale(1); } 50% { transform: scale(1.08); } 100% { transform: scale(1); } }
+@keyframes maistros-sparkle-fade { from { opacity: 0; } to { opacity: 1; } }
 .m-sparkle { animation: maistros-sparkle var(--dur-sparkle) var(--ease-beat) 1 both; transform-origin: 10px 8px; transform-box: view-box; }
 @media (prefers-reduced-motion: reduce) {
   :root { --rise: 0px; }
-  .m-sparkle { animation: none; }
+  .m-sparkle { animation: maistros-sparkle-fade var(--dur-page) linear both; }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
