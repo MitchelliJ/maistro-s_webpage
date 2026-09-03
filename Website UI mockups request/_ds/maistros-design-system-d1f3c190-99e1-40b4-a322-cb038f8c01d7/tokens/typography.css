@@ -1,0 +1,36 @@
+:root{
+--font-display:"Gabarito","Gabarito Fallback",system-ui,sans-serif;
+--font-text:"Onest","Onest Fallback",system-ui,sans-serif;
+--font-mono:ui-monospace,"SFMono-Regular",Menlo,monospace;
+
+--weight-h1:700;
+--weight-h2:600;
+--weight-h3:600;
+--weight-body:400;
+--weight-strong:600;
+
+--size-h1:clamp(2.5rem,5vw,4.5rem);
+--size-h2:32px;
+--size-h3:22px;
+--size-body:17px;
+--size-small:14px;
+
+--leading-h1:1.05;
+--leading-h2:1.15;
+--leading-h3:1.3;
+--leading-body:1.65;
+--leading-small:1.6;
+
+--tracking-wordmark:-0.02em;
+--tracking-h1:-0.015em;
+--tracking-h2:-0.01em;
+--tracking-body:0;
+
+/* Deck scale (13.33 x 7.5in). Max three sizes per slide. */
+--deck-headline:44pt; /* @kind font */
+--deck-subhead:24pt; /* @kind font */
+--deck-body:18pt; /* @kind font */
+--deck-caption:12pt; /* @kind font */
+
+--measure-body:66ch;
+}

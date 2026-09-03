@@ -1,0 +1,8 @@
+/* Gabarito (display) and Onest (text) are both on Google Fonts.
+   No vendor binaries were supplied with the brand guidelines, so the faces are
+   loaded from the Google Fonts CDN. Swap these @font-face rules for self-hosted
+   woff2 files when the licensed binaries arrive. */
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700&family=Onest:wght@400;600&display=swap");
+
+@font-face{font-family:"Gabarito Fallback";src:local("Gabarito");font-weight:600 700;font-display:swap}
+@font-face{font-family:"Onest Fallback";src:local("Onest");font-weight:400 600;font-display:swap}

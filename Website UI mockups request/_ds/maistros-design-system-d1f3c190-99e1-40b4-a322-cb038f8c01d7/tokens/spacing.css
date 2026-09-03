@@ -1,0 +1,29 @@
+:root{
+/* 4px base step. Section rhythm is generous; component rhythm is tight. */
+--space-0:0;
+--space-1:4px;
+--space-2:8px;
+--space-3:12px;
+--space-4:16px;
+--space-5:24px;
+--space-6:32px;
+--space-7:48px;
+--space-8:64px;
+--space-9:96px;
+--space-10:128px;
+
+--gutter:24px;
+--page-max:1160px;
+--prose-max:680px;
+--section-y:var(--space-9);
+--section-y-tight:var(--space-8);
+--card-pad:var(--space-5);
+--control-pad-x:var(--space-4);
+--control-pad-y:var(--space-3);
+
+--control-h-sm:34px;
+--control-h-md:44px;
+--control-h-lg:52px;
+
+--stagger:60ms; /* @kind other */
+}

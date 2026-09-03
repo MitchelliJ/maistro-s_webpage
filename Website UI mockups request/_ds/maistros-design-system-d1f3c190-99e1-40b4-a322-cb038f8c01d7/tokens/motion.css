@@ -1,0 +1,26 @@
+:root{
+--dur-hover:120ms; /* @kind other */
+--dur-base:240ms; /* @kind other */
+--dur-page:320ms; /* @kind other */
+--dur-sparkle:600ms; /* @kind other */
+--ease-beat:cubic-bezier(0.2,0.8,0.2,1); /* @kind other */
+--rise:8px;
+--stagger-step:60ms; /* @kind other */
+--transition-hover:var(--dur-hover) var(--ease-beat); /* @kind other */
+--transition-base:var(--dur-base) var(--ease-beat); /* @kind other */
+}
+
+@keyframes maistros-rise{from{opacity:0;transform:translateY(var(--rise))}to{opacity:1;transform:none}}
+@keyframes maistros-fade{from{opacity:0}to{opacity:1}}
+@keyframes maistros-sparkle{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
+@keyframes maistros-countin{0%,100%{opacity:.25}40%{opacity:1}}
+
+.m-rise{animation:maistros-rise var(--dur-base) var(--ease-beat) both}
+.m-sparkle{animation:maistros-sparkle var(--dur-sparkle) var(--ease-beat) 1 both}
+
+@media (prefers-reduced-motion:reduce){
+:root{--rise:0px}
+*,*::before,*::after{animation-duration:var(--dur-base)!important;animation-iteration-count:1!important;transition-duration:var(--dur-hover)!important}
+.m-rise{animation-name:maistros-fade}
+.m-sparkle{animation:maistros-fade var(--dur-base) both}
+}

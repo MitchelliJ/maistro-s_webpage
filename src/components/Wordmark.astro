@@ -1,0 +1,35 @@
+---
+/* Construction: maistros-wordmark-primary.html — "ma" + svg stem/sparkle (the i) + "stros". */
+interface Props {
+  size?: number;
+  ground?: 'paper' | 'dark' | 'turquoise';
+  animate?: boolean;
+  class?: string;
+}
+
+const { size = 28, ground = 'paper', animate = true, class: className } = Astro.props;
+
+const fields = {
+  paper: { text: '#0A403B', stem: '#0A403B', spark: '#F2621F' },
+  dark: { text: '#FFFFFF', stem: '#FFFFFF', spark: '#F2621F' },
+  turquoise: { text: '#0A403B', stem: '#0A403B', spark: '#FAF6F1' },
+};
+const c = fields[ground];
+const h = size * 0.823;
+const w = h * (20 / 52);
+const sparkle = 'M10 0.5 C10.9 5.6 12.4 7.1 17.5 8 C12.4 8.9 10.9 10.4 10 15.5 C9.1 10.4 7.6 8.9 2.5 8 C7.6 7.1 9.1 5.6 10 0.5 Z';
+---
+
+<span
+  class={className}
+  role="img"
+  aria-label="maistros"
+  style={`display:inline-flex;align-items:baseline;font-family:var(--font-heading);font-weight:700;font-size:${size}px;line-height:1;letter-spacing:-0.02em;color:${c.text};white-space:nowrap`}
+>
+  <span>ma</span>
+  <svg width={w} height={h} viewBox="0 0 20 52" aria-hidden="true" style="display:block;overflow:visible">
+    <rect x="5.5" y="19" width="9" height="33" rx="2" fill={c.stem} />
+    <path d={sparkle} fill={c.spark} class={animate ? 'm-sparkle' : undefined} />
+  </svg>
+  <span>stros</span>
+</span>

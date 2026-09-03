@@ -5,6 +5,8 @@ interface Props {
   ctaHref?: string;
 }
 
+import Wordmark from './Wordmark.astro';
+
 const { active, ctaLabel = 'Plan een kennismaking', ctaHref = 'mailto:hallo@maistros.co' } = Astro.props;
 
 const links = [
@@ -17,8 +19,10 @@ const links = [
 ---
 
 <header class="site-header">
-  <a href="/" class="brand">maistro<span class="brand-mark">’</span>s</a>
-  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+  <a href="/" class="brand" aria-label="maistros — home">
+    <Wordmark size={26} />
+  </a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Navigatiemenu tonen" />
   <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">
     <span></span><span></span><span></span>
   </label>

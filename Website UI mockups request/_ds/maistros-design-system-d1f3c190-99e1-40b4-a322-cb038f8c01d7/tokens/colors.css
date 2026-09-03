@@ -1,0 +1,64 @@
+:root{
+/* Brand palette — the whole brand. Four colours, no fifth. */
+--paper:#FAF6F1;
+--deep-teal:#0A403B;
+--turquoise:#16A79B;
+--orange:#F2621F;
+
+/* Support text colours. Typography spec only — never fills, backgrounds or accents. */
+--graphite:#2A2E2C;
+--slate:#5C625F;
+--hairline:#E5DFD5;
+--chalk:#DDE8E4;
+--muted-chalk:#8FAAA4;
+
+/* Mechanical derivations. Interaction states only; not palette members. */
+--deep-teal-hover:#0D544D;
+--deep-teal-press:#072F2B;
+--turquoise-hover:#139287;
+--turquoise-press:#0F7A71;
+--orange-hover:#DA5316;
+--orange-press:#BE4711;
+--paper-sunk:#F3EDE4;
+--hairline-dark:#1C534E;
+
+/* Semantic aliases — light ground (default) */
+--surface-page:var(--paper);
+--surface-card:#FFFFFF;
+--surface-sunk:var(--paper-sunk);
+--surface-field:var(--deep-teal);
+--text-heading:var(--deep-teal);
+--text-body:var(--graphite);
+--text-caption:var(--slate);
+--text-link:var(--deep-teal);
+--text-link-hover:var(--turquoise);
+--text-inverse:var(--paper);
+--border-hairline:var(--hairline);
+--border-strong:var(--deep-teal);
+--structure:var(--turquoise);
+--accent:var(--orange);
+--focus-ring:var(--turquoise);
+
+/* Semantic aliases — dark ground. Apply with [data-ground="dark"] or .on-dark. */
+--dark-surface-page:var(--deep-teal);
+--dark-surface-card:#0D4A44;
+--dark-text-heading:#FFFFFF;
+--dark-text-body:var(--chalk);
+--dark-text-caption:var(--muted-chalk);
+--dark-border-hairline:var(--hairline-dark);
+}
+
+[data-ground="dark"],.on-dark{
+--surface-page:var(--dark-surface-page);
+--surface-card:var(--dark-surface-card);
+--surface-sunk:#083732;
+--text-heading:var(--dark-text-heading);
+--text-body:var(--dark-text-body);
+--text-caption:var(--dark-text-caption);
+--text-link:#FFFFFF;
+--text-link-hover:var(--turquoise);
+--text-inverse:var(--deep-teal);
+--border-hairline:var(--dark-border-hairline);
+color:var(--text-body);
+background:var(--surface-page);
+}

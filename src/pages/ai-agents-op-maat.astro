@@ -47,7 +47,7 @@ const steps = [
   <div class="section section-tight" style="border-bottom: 0;">
     <h2 class="rv section-title">Het traject</h2>
   </div>
-  <div class="steps section" style="padding: 0; border-bottom: 2px solid var(--color-divider);">
+  <div class="steps section" style="padding: 0; border-bottom: 1px solid var(--color-divider);">
     {steps.map((step, i) => (
       <div class="rv" style={`animation-delay: ${(i * 0.06).toFixed(2)}s;`}>
         <div class="step-marker"><span></span><span>Stap {step.n}</span></div>
@@ -74,7 +74,7 @@ const steps = [
 
 <style>
   .hero-agents {
-    border-bottom: 2px solid var(--color-divider);
+    border-bottom: 1px solid var(--color-divider);
   }
   .hero-agents-row {
     display: grid;
