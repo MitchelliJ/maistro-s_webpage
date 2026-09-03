@@ -1,55 +1,102 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const cards = [
-  {
-    title: 'AI-scan',
-    body: 'Samen om tafel. Je krijgt een concreet overzicht van kansen, gerangschikt op impact en haalbaarheid.',
-  },
-  {
-    title: 'Roadmap',
-    body: 'Wat eerst, wat later, wat nooit — met kosten en verwachte opbrengst per stap.',
-  },
-  {
-    title: 'Sparringpartner',
-    body: 'Een vast moment per maand voor directies die AI serieus nemen maar geen CTO hebben. Jij houdt overzicht, wij houden je scherp.',
-  },
+    {
+        title: "Hulp bij managementvraagstukken",
+        body: "Waar liggen de kansen voor jouw organisatie — en wat kan je beter zonder AI doen? We maken concreet hoe AI kan helpen met jouw bedrijfsdoelstellingen.",
+    },
+    {
+        title: "Roadmap",
+        body: "Wat eerst, wat later, wat nooit. Inclusief te verwachte kosten en opbrengst. Een realistisch plan waarmee je gericht kunt investeren, prioriteiten kunt stellen en weet waar je aan toe bent.",
+    },
+    {
+        title: "Sparringpartner",
+        body: "Een vast moment per maand voor directies die AI serieus nemen maar geen CTO hebben. We helpen je keuzes afwegen, ontwikkelingen duiden en prioriteiten bewaken.",
+    },
 ];
 ---
 
 <BaseLayout
-  title="Strategie & advies"
-  description="Voor je investeert in AI, wil je weten waar het geld zit. AI-scan, roadmap en een vaste sparringpartner voor directies die AI serieus nemen."
-  active="strategie"
+    title="Strategie & advies"
+    description="Voor je investeert in AI, wil je weten waar het geld zit. AI-scan, roadmap en een vaste sparringpartner voor directies die AI serieus nemen."
+    active="strategie"
 >
-  <div class="split-even">
+    <div class="split-even">
+        <div class="section section-tight" style="border-bottom: 0;">
+            <div class="rv eyebrow">Strategie &amp; advies</div>
+            <h1 class="rv hero-title" style="animation-delay: .06s;">
+                Eerst weten.<br />Dan doen.
+            </h1>
+        </div>
+        <div
+            class="section section-tight"
+            style="border-bottom: 0; display: flex; align-items: center;"
+        >
+            <p class="rv lede" style="margin: 0; animation-delay: .12s;">
+                Voor je investeert in AI, wil je antwoord op drie vragen: wat
+                kan er, wat heeft jouw bedrijf echt nodig, en moet je dat kopen,
+                bouwen of inhuren? Wij doorgronden jouw situatie en helpen met
+                de antwoorden.
+            </p>
+        </div>
+    </div>
+
     <div class="section section-tight" style="border-bottom: 0;">
-      <div class="rv eyebrow">Strategie &amp; advies</div>
-      <h1 class="rv hero-title" style="animation-delay: .06s;">Eerst weten.<br />Dan doen.</h1>
+        <h2
+            class="rv section-title"
+            style="margin-bottom: 24px;"
+            align="center"
+        >
+            Hoe we helpen
+        </h2>
     </div>
-    <div class="section section-tight" style="border-bottom: 0; display: flex; align-items: center;">
-      <p class="rv lede" style="margin: 0; animation-delay: .12s;">Voor je investeert in AI, wil je weten waar het geld zit. Wij kijken naar je bedrijf zoals een bouwer dat doet: welke processen zijn repetitief, waar zit de data, wat is realistisch met de tools die je al hebt.</p>
+    <div class="cols-3 section" style="padding-top: 24px;">
+        {
+            cards.map((card, i) => (
+                <div
+                    class="rv"
+                    style={
+                        i
+                            ? `animation-delay: ${(i * 0.06).toFixed(2)}s;`
+                            : undefined
+                    }
+                >
+                    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px;">
+                        <>
+                            <span class="step-num">{i + 1}</span>
+                            <span style="font-size: 11px; font-weight: 600;">
+                                {["Antwoord", "Plannen", "Begeleiden"][i]}
+                            </span>
+                        </>
+                    </div>
+                    <h3 style="margin: 0 0 12px;">{card.title}</h3>
+                    <p style="font-size: 14px; line-height: 1.6; margin: 0;">
+                        {card.body}
+                    </p>
+                </div>
+            ))
+        }
     </div>
-  </div>
 
-  <div class="section section-tight" style="border-bottom: 0;">
-    <h2 class="rv section-title">Wat je krijgt</h2>
-  </div>
-  <div class="cols-3 section">
-    {cards.map((card, i) => (
-      <div class="rv" style={i ? `animation-delay: ${(i * 0.06).toFixed(2)}s;` : undefined}>
-        <div style="width: 44px; height: 6px; background: var(--color-accent); margin-bottom: 18px;"></div>
-        <h3 style="margin: 0 0 10px;">{card.title}</h3>
-        <p style="font-size: 14px; line-height: 1.6; margin: 0;">{card.body}</p>
-      </div>
-    ))}
-  </div>
-
-  <div class="cta-banner">
-    <div>
-      <h2 class="rv section-title" style="margin-bottom: 16px; max-width: 24ch;">Eerste gesprek is gratis.</h2>
-      <p class="rv lede" style="max-width: 56ch;">Een uur aan tafel. Geen verplichtingen, geen verkooppraatje.</p>
+    <div class="cta-banner">
+        <div>
+            <h2
+                class="rv section-title"
+                style="margin-bottom: 16px; max-width: 24ch;"
+            >
+                Eerste kennismaking is gratis.
+            </h2>
+            <p class="rv lede" style="max-width: 56ch;">
+                Samen aan tafel, de inhoud in. Dat vinden we leuk. Geen verplichtingen, geen
+                verkooppraatje.
+            </p>
+        </div>
+        <a
+            href="mailto:hallo@maistros.co?subject=Kennismaking"
+            class="btn btn-primary"
+            style="font-size: 16px; padding: 16px 20px;"
+            >Plan een kennismaking</a
+        >
     </div>
-    <a href="mailto:hallo@maistros.co?subject=Kennismaking" class="btn btn-primary" style="font-size: 16px; padding: 16px 20px;">Plan een kennismaking</a>
-  </div>
 </BaseLayout>
