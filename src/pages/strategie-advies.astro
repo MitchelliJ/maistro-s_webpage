@@ -4,15 +4,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const cards = [
   {
     title: 'AI-scan',
-    body: 'een halve dag aan tafel, een concreet overzicht van kansen, gerangschikt op impact en haalbaarheid.',
+    body: 'Samen om tafel. Je krijgt een concreet overzicht van kansen, gerangschikt op impact en haalbaarheid.',
   },
   {
     title: 'Roadmap',
-    body: 'wat eerst, wat later, wat nooit. Met kosten en verwachte opbrengst.',
+    body: 'Wat eerst, wat later, wat nooit — met kosten en verwachte opbrengst per stap.',
   },
   {
     title: 'Sparringpartner',
-    body: 'een vast moment per maand voor directies die AI serieus nemen maar geen CTO hebben.',
+    body: 'Een vast moment per maand voor directies die AI serieus nemen maar geen CTO hebben. Jij houdt overzicht, wij houden je scherp.',
   },
 ];
 ---
@@ -46,7 +46,10 @@ const cards = [
   </div>
 
   <div class="cta-banner">
-    <p class="rv pull-quote" style="font-size: 30px; line-height: 1.15; margin: 0; max-width: 26ch;">Een uur aan tafel. Geen verplichtingen, geen verkooppraatje.</p>
-    <a href="mailto:hallo@maistros.co" class="btn btn-primary" style="font-size: 16px; padding: 16px 20px;">Plan een kennismaking</a>
+    <div>
+      <h2 class="rv section-title" style="margin-bottom: 16px; max-width: 24ch;">Eerste gesprek is gratis.</h2>
+      <p class="rv lede" style="max-width: 56ch;">Een uur aan tafel. Geen verplichtingen, geen verkooppraatje.</p>
+    </div>
+    <a href="mailto:hallo@maistros.co?subject=Kennismaking" class="btn btn-primary" style="font-size: 16px; padding: 16px 20px;">Plan een kennismaking</a>
   </div>
 </BaseLayout>
