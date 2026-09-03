@@ -202,8 +202,10 @@ body { overflow-x: hidden; background: var(--color-bg-sunk); }
 .team-card:last-child { border-bottom: 1px solid var(--color-divider); }
 .team-role { font-size: 12px; font-weight: 600; letter-spacing: 0; color: var(--color-accent); margin: 2px 0 8px; }
 
+.card-title { font-family: var(--font-heading); font-weight: 700; font-size: 18px; color: var(--color-heading); }
+
 .pull-quote {
-  font-family: var(--font-heading); font-weight: 700; letter-spacing: -.015em; color: var(--color-heading); margin: 0;
+  font-family: var(--font-heading); font-weight: 700; font-size: 24px; line-height: 1.25; letter-spacing: -.015em; color: var(--color-heading); margin: 0;
 }
 
 .hide-mobile { }
