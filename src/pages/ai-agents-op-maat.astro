@@ -5,22 +5,22 @@ const steps = [
   {
     n: '1',
     title: 'AI-champions',
-    body: 'Elke afdeling wijst één persoon aan. Niet per se de meest technische, wel de meest nieuwsgierige. Dit worden jouw AI-champions.',
+    body: 'Elke afdeling wijst één persoon aan. Niet per se de meest technische, wel de meest nieuwsgierige. Dit worden de AI-champions van jouw organisatie.',
   },
   {
     n: '2',
     title: 'Workshop',
-    body: 'Eén dag. We leren de champions wat AI kan, wat het niet kan, en hoe je een goed use case herkent. Aan het eind van de dag heeft elke afdeling een shortlist.',
+    body: 'We leren de champions wat AI kan, wat het niet kan, en hoe je een goed use case herkent. Na afloop weet iedereen hoe ze AI kansen herkennen in het dagdagelijkse werk.',
   },
   {
     n: '3',
     title: 'Observatie & businesscase',
-    body: 'We lopen mee in het proces. We rekenen uit wat de agent bespaart, wat het kost om te bouwen en wanneer het terugverdiend is. Eerlijk: soms is het antwoord “niet doen”.',
+    body: 'We observeren het proces. We maken van te voren een business case: wat het kost, wat het oplevert, waar de winst zit. Soms is het antwoord: "niet doen".',
   },
   {
     n: '4',
     title: 'Bouwen',
-    body: 'De agents die het waard zijn, bouwen we. Samen met de champion, zodat de kennis in jouw bedrijf blijft.',
+    body: 'De beste agents worden gebouwd. Samen met jouw mensen, zodat we ook de details juist krijgen, en de kennis in jouw bedrijf blijft.',
   },
   {
     n: '5',
@@ -32,15 +32,16 @@ const steps = [
 
 <BaseLayout
   title="AI-agents op maat"
-  description="Jullie kennen het werk. Wij kennen de AI. Samen bouwen we de agent — van AI-champions tot een werkende agent, gebouwd met je eigen mensen."
+  description="Jullie kennen het werk. Wij kennen AI. Samen bouwen we de agent — van AI-champions tot een werkende agent, gebouwd met je eigen mensen."
   active="ai-agents"
+  ctaHref="mailto:hallo@maistros.co?subject=Kennismaking%20AI-agents%20op%20maat"
 >
   <div class="section section-tight hero-agents">
     <div class="rv eyebrow">AI-agents op maat</div>
-    <h1 class="rv hero-title" style="--h1-measure: 22ch; animation-delay: .06s;">Jullie kennen het werk. Wij kennen de AI. Samen bouwen we de agent.</h1>
+    <h1 class="rv hero-title" style="--h1-measure: 22ch; animation-delay: .06s;">Jullie kennen het werk. Wij kennen AI. Samen bouwen we de agent.</h1>
     <div class="hero-agents-row">
-      <p class="rv lede" style="max-width: 60ch; animation-delay: .12s;">De beste AI-toepassingen worden niet bedacht in een vergaderzaal. Ze komen van de mensen die elke dag tegen hetzelfde probleem aanlopen. Ons traject haalt die kennis naar boven en bouwt er iets van dat werkt. In weken, niet in maanden.</p>
-      <a href="mailto:hallo@maistros.co?subject=Kennismaking" class="btn btn-primary rv" style="font-size: 15px; padding: 14px 20px; margin: 0; text-align: left; justify-content: flex-start; animation-delay: .18s;">Plan een kennismaking</a>
+      <p class="rv lede" style="max-width: 60ch; margin: 0 0 28px; animation-delay: .12s;">De beste AI-toepassingen worden niet bedacht in een vergaderzaal. Ze komen van de mensen die elke dag tegen hetzelfde probleem aanlopen. Ons traject haalt die kennis naar boven en bouwt er iets van dat werkt. In weken, niet in maanden.</p>
+      <a href="mailto:hallo@maistros.co?subject=Kennismaking%20AI-agents%20op%20maat" class="btn btn-primary rv" style="font-size: 15px; padding: 14px 20px; animation-delay: .18s;">Plan een kennismaking</a>
     </div>
   </div>
 
@@ -58,7 +59,7 @@ const steps = [
   </div>
 
   <div class="section section-tight" style="border-bottom: 0;">
-    <p class="rv pull-quote" style="margin: 0; max-width: 34ch;">Zo groeit AI in je bedrijf — zodat je het ook zonder ons kan.</p>
+    <p class="rv pull-quote" style="margin: 0 auto; max-width: 34ch; text-align: center;">“Zo groeit AI in je bedrijf. Zodat je het ook zonder ons kan.”</p>
   </div>
 
   <div class="split-reverse" style="--side-w: 340px;">
@@ -74,6 +75,14 @@ const steps = [
       </div>
     </div>
   </div>
+
+  <div class="cta-banner">
+    <div>
+      <h2 class="rv section-title" style="margin-bottom: 16px; max-width: 24ch;">Laten we beginnen.</h2>
+      <p class="rv lede" style="max-width: 56ch;">Plan een kennismaking. We leren jouw bedrijf graag kennen!</p>
+    </div>
+    <a href="mailto:hallo@maistros.co?subject=Kennismaking%20AI-agents%20op%20maat" class="btn btn-primary" style="font-size: 16px; padding: 16px 20px;">Plan een kennismaking</a>
+  </div>
 </BaseLayout>
 
 <style>
@@ -81,15 +90,9 @@ const steps = [
     border-bottom: 1px solid var(--color-divider);
   }
   .hero-agents-row {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 48px;
-    align-items: end;
+    display: block;
   }
   @media (max-width: 860px) {
-    .hero-agents-row {
-      grid-template-columns: 1fr;
-    }
     .hero-agents-row .btn {
       width: 100%;
     }
